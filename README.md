@@ -53,3 +53,15 @@ node --test test/godot-vscode.test.mts
 ## License
 
 [MIT](LICENSE)
+
+## Quick Install & Run (Windows / Linux / macOS)
+
+```powershell
+# Windows (PowerShell) — 1-line VSIX install into Code - OSS / VS Code
+gh release download -R awesome-os/godot-vscode -p "*.vsix" -O "godot-vscode.vsix" --clobber; code --install-extension "godot-vscode.vsix"
+```
+
+```sh
+# Linux & macOS — 1-line VSIX install into Code - OSS / VS Code
+gh release download -R awesome-os/godot-vscode -p "*.vsix" -O "godot-vscode.vsix" --clobber && code --install-extension "godot-vscode.vsix"
+```
