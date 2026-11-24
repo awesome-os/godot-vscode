@@ -2,7 +2,7 @@
   "name": "godot-ghost",
   "displayName": "Godot Ghost (Awesome-OS)",
   "publisher": "awesome-os",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MIT Godot 4 extension for Awesome-OS Code - OSS & Eclipse Theia — instant b8g-ghost cas-v1 Godot + .NET 11 hydration, GDScript/C# tasks, and live scene runner",
   "license": "MIT",
   "type": "module",
@@ -13,7 +13,7 @@
   },
   "engines": {
     "vscode": "^1.85.0",
-    "node": ">=22.6.0"
+    "node": ">=22.18.0"
   },
   "categories": [
     "Programming Languages",
