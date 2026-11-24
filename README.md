@@ -2,6 +2,31 @@
 
 MIT-licensed Godot 4 extension for **Awesome-OS Code - OSS** and **Eclipse Theia** featuring instant `b8g-ghost` `cas-v1` hydration for Godot 4 + .NET 11 + `b8g-ghost-abi`, GDScript/C# task definitions, and a live scene runner.
 
+## Install & Usage
+
+### 1-Command `.vsix` Install (Awesome-OS Code - OSS / Eclipse Theia / VS Code)
+
+```powershell
+gh release download -R awesome-os/godot-vscode --pattern "*.vsix" --dir "$HOME/.b8g/cas/extensions" --clobber
+```
+
+Or download the `.vsix` from [`Releases`](https://github.com/awesome-os/godot-vscode/releases/latest) and run `code-oss --install-extension <file>.vsix` (or install from Open VSX once published).
+
+### Usage
+
+Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run:
+
+- **Godot Ghost: Hydrate Godot 4 + .NET 11 from cas-v1** (`godotGhost.hydrate`)
+- **Godot Ghost: Run Project / Scene** (`godotGhost.runProject`)
+- **Godot Ghost: Open Godot Editor** (`godotGhost.openEditor`)
+- **Godot Ghost: Export Build** (`godotGhost.exportBuild`)
+
+Run tests locally (Node.js 22+):
+
+```powershell
+node --test test/*.test.mts
+```
+
 ## Features
 
 - **Zero-install `cas-v1` Hydration (`godotGhost.hydrate`):** Resolves `godot-*`, `dotnet-sdk-*` (.NET 11), and `b8g-ghost-abi-*.node` directly from [`awesome-os/b8g-ghost`](https://github.com/awesome-os/b8g-ghost) (`manifests/index.json` @ `cas-v1`) with SHA-256 content-addressed URLs.
