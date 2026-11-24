@@ -1,0 +1,133 @@
+{
+  "name": "godot-ghost",
+  "displayName": "Godot Ghost (Awesome-OS)",
+  "publisher": "awesome-os",
+  "version": "0.1.0",
+  "description": "MIT Godot 4 extension for Awesome-OS Code - OSS & Eclipse Theia — instant b8g-ghost cas-v1 Godot + .NET 11 hydration, GDScript/C# tasks, and live scene runner",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/extension.mts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awesome-os/godot-vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0",
+    "node": ">=22.6.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Debuggers",
+    "Other"
+  ],
+  "keywords": [
+    "godot",
+    "godot4",
+    "gdscript",
+    "csharp",
+    "dotnet",
+    "b8g-ghost",
+    "awesome-os",
+    "theia",
+    "code-oss"
+  ],
+  "activationEvents": [
+    "workspaceContains:project.godot",
+    "onCommand:godotGhost.hydrate",
+    "onCommand:godotGhost.runProject",
+    "onCommand:godotGhost.openEditor",
+    "onCommand:godotGhost.exportBuild"
+  ],
+  "scripts": {
+    "test": "node --test test/godot-vscode.test.mts"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "godotGhost.hydrate",
+        "title": "Godot Ghost: Hydrate Godot 4 + .NET 11 from cas-v1"
+      },
+      {
+        "command": "godotGhost.runProject",
+        "title": "Godot Ghost: Run Project / Scene"
+      },
+      {
+        "command": "godotGhost.openEditor",
+        "title": "Godot Ghost: Open Godot Editor"
+      },
+      {
+        "command": "godotGhost.exportBuild",
+        "title": "Godot Ghost: Export Build"
+      }
+    ],
+    "taskDefinitions": [
+      {
+        "type": "godot-ghost",
+        "required": [
+          "action"
+        ],
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "hydrate",
+              "run",
+              "editor",
+              "export",
+              "dotnet-build"
+            ],
+            "description": "Godot Ghost task action to execute"
+          },
+          "projectPath": {
+            "type": "string",
+            "description": "Path to the Godot project directory containing project.godot"
+          },
+          "scene": {
+            "type": "string",
+            "description": "Optional scene resource path (for example res://main.tscn)"
+          },
+          "preset": {
+            "type": "string",
+            "description": "Godot export preset name when action is export"
+          },
+          "outputPath": {
+            "type": "string",
+            "description": "Output artifact path when action is export"
+          },
+          "headless": {
+            "type": "boolean",
+            "description": "Run Godot in --headless mode"
+          }
+        }
+      }
+    ],
+    "configuration": {
+      "title": "Godot Ghost",
+      "properties": {
+        "godotGhost.indexUrl": {
+          "type": "string",
+          "default": "https://raw.githubusercontent.com/awesome-os/b8g-ghost/main/manifests/index.json",
+          "description": "URL of the awesome-os/b8g-ghost cas-v1 manifest index"
+        },
+        "godotGhost.casBaseUrl": {
+          "type": "string",
+          "default": "https://github.com/awesome-os/b8g-ghost/releases/download/cas-v1",
+          "description": "Base URL for content-addressed SHA-256 blobs in cas-v1"
+        },
+        "godotGhost.preferMono": {
+          "type": "boolean",
+          "default": true,
+          "description": "Prefer .NET-enabled (mono) Godot 4 binaries when resolving cas-v1"
+        },
+        "godotGhost.extraArgs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Additional CLI flags forwarded to the Godot executable"
+        }
+      }
+    }
+  }
+}
