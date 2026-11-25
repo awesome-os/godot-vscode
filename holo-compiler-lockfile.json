@@ -1,0 +1,40 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/godot-vscode",
+  "targets": [
+    "win64",
+    "linux-x64",
+    "linux-arm64",
+    "macos-arm64",
+    "wasm32-wasi"
+  ],
+  "generatedAt": "2026-11-24T23:53:02.473Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/godot-vscode/godot-ghost-0.2.0.vsix",
+      "kind": "vsix",
+      "version": "v0.2.0",
+      "target": "any",
+      "sha512": "014733b80eb74ee8a578a58b395ba4175ff30759cb2b2b89193281a1389ebe9015296d1c913861daafac1617014b64fb8e45f751ca812b9d9f311a6a9077f750",
+      "size": 12354,
+      "executable": false,
+      "blob": "v11/files/01/014733b80eb74ee8a578a58b395ba4175ff30759cb2b2b89193281a1389ebe9015296d1c913861daafac1617014b64fb8e45f751ca812b9d9f311a6a9077f750",
+      "url": "https://github.com/awesome-os/godot-vscode/releases/download/v0.2.0/godot-ghost-0.2.0.vsix",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/godot-vscode/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.2.0",
+      "target": "any",
+      "sha512": "3871a2f6f79119d821d8c8fe5836e4c78e8f8f46e4f53306f10499d91181dc5f2e7e8fc782a61216f4cfd84ea30dfaae9e274455ebfe03279c08e412b5193b1b",
+      "size": 89,
+      "executable": false,
+      "blob": "v11/files/38/3871a2f6f79119d821d8c8fe5836e4c78e8f8f46e4f53306f10499d91181dc5f2e7e8fc782a61216f4cfd84ea30dfaae9e274455ebfe03279c08e412b5193b1b",
+      "url": "https://github.com/awesome-os/godot-vscode/releases/download/v0.2.0/SHA256SUMS.txt",
+      "dependencies": []
+    }
+  ]
+}
