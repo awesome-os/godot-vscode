@@ -1,3 +1,5 @@
+> [!NOTE] Consolidated into https://github.com/awesome-os/devtools
+
 # Godot Ghost (`awesome-os/godot-vscode`)
 
 MIT-licensed Godot 4 extension for **Awesome-OS Code - OSS** and **Eclipse Theia** featuring instant `b8g-ghost` `cas-v1` hydration for Godot 4 + .NET 11 + `b8g-ghost-abi`, GDScript/C# task definitions, and a live scene runner.
